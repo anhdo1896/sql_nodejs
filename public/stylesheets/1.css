@@ -1,0 +1,26 @@
+*{margin: 0; padding: 0;}
+
+body{
+    background-image:url("/images/bg.jpg");
+    background-image: no-repeat;
+}
+ul.nav.navbar-nav.top-right {
+    float: right;
+} 
+
+.thumb-post img {
+    object-fit: none; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+    width: 100%;
+    max-height: 230px;
+    margin-bottom: 1rem;
+  }
+  img.img-fluid.avatar {
+    max-width: 37%;
+    object-fit: none; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+    /* width: 100%; */
+    max-height: 178px;
+    margin-left: 11rem;
+    /* top: 13px; */
+}

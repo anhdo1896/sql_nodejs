@@ -1,0 +1,70 @@
+ <%- include('./../layouts/header') -%>
+ 
+
+	<!-- content start -->
+	<div class="content">
+		<div class="container mt-3">
+			<div class="row">
+				<div class="col-sm-6 push-sm-3">
+					<div class="card-group ">
+						<div class="card"
+							style="box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22)">
+							<div class="card-block">
+								<h5 class="display-5 text-sm-center">Login</h5>
+								<form action="login" method="POST">
+
+
+									<div id="hienthi" class="alert alert-success  alert-dismissible fade in"
+										style=" <% if (!data || !data.err){  %> display:none; <% } %>">
+										<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+										<% if(data && data.err){ %>
+										<span> <%= data.err %> </span>
+										<% } %>
+									</div>
+										<% if(data.username){ %>
+									<fieldset class="form-group">
+										<label for="">Username</label>
+										<input type="text" name="username" class="form-control" 
+											id="formGroupExampleInput" placeholder="Username" value="<%= data.username  %>">
+									</fieldset> 
+									<% }else{ %>
+									<fieldset class="form-group">
+										<label for="">Username</label>
+										<input type="text" name="username" class="form-control" 
+											id="formGroupExampleInput" placeholder="Username">
+									</fieldset>
+									<% } %>
+									<% if(data.passwd){ %>
+									<fieldset class="form-group">
+										<label for="">Password</label>
+										<input type="password" name="passwd" class="form-control"
+											id="formGroupExampleInput2" placeholder="Password" value ="<%= data.passwd  %>">
+									</fieldset>	
+									<% }else{ %>
+										<fieldset class="form-group">
+										<label for="">Password</label>
+										<input type="password" name="passwd" class="form-control"
+											id="formGroupExampleInput2" placeholder="Password" >
+									</fieldset>	
+									<% } %>
+									<fieldset class="form-group">
+
+										<input type="submit" class="form-control btn btn-outline-warning"
+											id="formGroupExampleInput2" value="Login">
+									</fieldset>
+									<fieldset class="form-group">
+										<a href="">Forgot password</a>
+									</fieldset>
+								</form>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- content end -->
+</body>
+
+</html>
